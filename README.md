@@ -27,8 +27,6 @@ curl --request POST \
 To remove resources with ids: ID1, ID2, ID3:
 ```
 curl --request DELETE \
-  --url https://id.resmo.app/integration/custom-data/event/YOUR_TABLE_NAME_HERE?resourceIds=ID1,ID2,ID3 \
-  --header 'Content-Type: application/json' \
-  --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE' \
-  --data 'PAYLOAD_HERE'
+  --url https://id.resmo.app/integration/custom-data/YOUR_TABLE_NAME_HERE?resourceIds=ID1,ID2,ID3 \
+  --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE'
 ```
