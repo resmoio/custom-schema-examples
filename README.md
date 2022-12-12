@@ -1,80 +1,34 @@
 # Resmo Custom Data Resource/Schema Examples
-## Example data:
+
+## Example JSON schema for an employee
+[Example JSON Schema](schema.json)
+
+## Resource event (single)
+[Valid example of payload](payload.json)
 ```
-{
-  "employeeId": "18129",
-  "employee": {
-      "name": "lorem ipsum",
-      "username": "lipsum",
-      "email": "info@resmo.com"
-  },
-  "createdAt": "2016-11-24",
-  "department": "Integrations",
-  "salary": 1230.0,
-  "manager": "test",
-  "active": true
-}
+curl --request POST \
+  --url https://id.resmo.app/integration/custom-data/event/YOUR_TABLE_NAME_HERE \
+  --header 'Content-Type: application/json' \
+  --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE' \
+  --data 'PAYLOAD_HERE'
 ```
-## Schema for example data:
+
+## Resource event (bulk)
+[Valid example of payload](bulk-payload.json)
 ```
-{
-	"type": "object",
-	"resmo": {
-		"id": "employeeId",
-		"name": "$.employee.username",
-		"importantFields": [
-			"employeeId",
-			"employee",
-			"active"
-		]
-	},
-	"title": "Employee Schema",
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"properties": {
-		"active": {
-			"type": "boolean",
-			"default": false
-		},
-		"salary": {
-			"type": "number",
-			"default": 0
-		},
-		"manager": {
-			"type": "string",
-			"default": ""
-		},
-		"employee": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string",
-					"default": ""
-				},
-				"email": {
-					"type": "string",
-					"default": ""
-				},
-				"username": {
-					"type": "string",
-					"default": ""
-				}
-			}
-		},
-		"createdAt": {
-			"type": "string",
-			"default": ""
-		},
-		"department": {
-			"type": "string",
-			"default": ""
-		},
-		"employeeId": {
-			"type": "string",
-			"title": "The employeeId Schema",
-			"examples": [
-				"18129"
-			]
-		}
-	}
-}
+curl --request POST \
+  --url https://id.resmo.app/integration/custom-data/bulk-event/YOUR_TABLE_NAME_HERE \
+  --header 'Content-Type: application/json' \
+  --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE' \
+  --data 'PAYLOAD_HERE'
+```
+
+## Delete a resource
+To remove resources with ids: ID1, ID2, ID3:
+```
+curl --request DELETE \
+  --url https://id.resmo.app/integration/custom-data/event/YOUR_TABLE_NAME_HERE?resourceIds=ID1,ID2,ID3 \
+  --header 'Content-Type: application/json' \
+  --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE' \
+  --data 'PAYLOAD_HERE'
 ```
