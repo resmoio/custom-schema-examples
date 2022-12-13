@@ -1,0 +1,13 @@
+{
+    "employeeId": "18129",
+    "employee": {
+        "name": "lorem ipsum",
+        "username": "lipsum",
+        "email": "info@resmo.com"
+    },
+    "createdAt": "2016-11-24",
+    "department": "Integrations",
+    "salary": 1230.0,
+    "manager": "test",
+    "active": true
+  }
