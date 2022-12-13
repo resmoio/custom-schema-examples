@@ -5,9 +5,9 @@
 
 ## Resource event (single)
 [Valid example of payload](payload.json)
-```
+```bash
 curl --request POST \
-  --url https://id.resmo.app/integration/custom-data/event/YOUR_TABLE_NAME_HERE \
+  --url https://YOUR_DOMAIN.resmo.app/integration/custom-data/event/YOUR_TABLE_NAME_HERE \
   --header 'Content-Type: application/json' \
   --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE' \
   --data 'PAYLOAD_HERE'
@@ -15,9 +15,9 @@ curl --request POST \
 
 ## Resource event (bulk)
 [Valid example of payload](bulk-payload.json)
-```
+```bash
 curl --request POST \
-  --url https://id.resmo.app/integration/custom-data/bulk-event/YOUR_TABLE_NAME_HERE \
+  --url https://YOUR_DOMAIN.resmo.app/integration/custom-data/bulk-event/YOUR_TABLE_NAME_HERE \
   --header 'Content-Type: application/json' \
   --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE' \
   --data 'PAYLOAD_HERE'
@@ -25,8 +25,8 @@ curl --request POST \
 
 ## Delete a resource
 To remove resources with ids: ID1, ID2, ID3:
-```
+```bash
 curl --request DELETE \
-  --url https://id.resmo.app/integration/custom-data/YOUR_TABLE_NAME_HERE?resourceIds=ID1,ID2,ID3 \
+  --url https://YOUR_DOMAIN.resmo.app/integration/custom-data/YOUR_TABLE_NAME_HERE?resourceIds=ID1,ID2,ID3 \
   --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE'
 ```
