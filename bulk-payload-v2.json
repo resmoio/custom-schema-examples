@@ -1,0 +1,41 @@
+[
+    {
+        "employeeId": "18129",
+        "employee": {
+            "name": "lorem ipsum",
+            "username": "lipsum",
+            "email": "lipsum@resmo.com"
+        },
+        "createdAt": "2021-11-20",
+        "department": "Integrations",
+        "salary": 1260.0,
+        "manager": "dolor",
+        "active": true
+      },
+      {
+        "employeeId": "89848",
+        "employee": {
+            "name": "new dolor",
+            "username": "dolor",
+            "email": "dolor@resmo.com"
+        },
+        "createdAt": "2019-09-12",
+        "department": "Management",
+        "salary": 2100.0,
+        "manager": "",
+        "active": true
+      },
+      {
+        "employeeId": "72732",
+        "employee": {
+            "name": "new employee",
+            "username": "new",
+            "email": "new@resmo.com"
+        },
+        "createdAt": "2022-12-14",
+        "department": "Integrations",
+        "salary": 0.0,
+        "manager": "cem",
+        "active": true
+      }
+]
