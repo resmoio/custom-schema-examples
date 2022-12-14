@@ -14,14 +14,14 @@ $ curl --request POST \
   --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE' \
   --data 'PAYLOAD_HERE'
 ```
-*Result of the payload:*
+*Navigate to resource on Resmo and you can see the created resource:*
 ![Resource Added](images/created-resource.png)
 
 ### Modify a field of the added resource
 
 Use same example [payload](payload.json) again with changing salary field.
 
-*Result of the payload:*
+*Navigate to resource on Resmo and you can see the modified resource:*
 ![Resource Modified](images/updated-resource.png)
 
 > If you set id field different from the previous, it will be evaluated as a new resource.
@@ -40,12 +40,12 @@ $ curl --request POST \
   --data 'PAYLOAD_HERE'
 ```
 
-*Result of the payload:*
+*Navigate to resource on Resmo and you can see the added resources:*
 ![Resources Added](images/created-bulk.png)
 
 Use same example [payload](payload.json) again with changing salary field.
 
-*Result of the payload:*
+*Navigate to changes on Resmo and you can see the modified resources:*
 ![Resources Updated](images/updated-bulk.png)
 
 > New id's will be evaluated as new resource, missing resources will be removed as nature of bulk events.
@@ -57,5 +57,5 @@ $ curl --request DELETE \
   --url https://YOUR_DOMAIN.resmo.app/integration/custom-data/YOUR_TABLE_NAME_HERE?resourceIds=ID1,ID2,ID3 \
   --header 'X-Ingest-Key: YOUR_INTEGRATION_INGEST_KEY_HERE'
 ```
-*Remove employee with id '18129'*
+*Navigate to changes on Resmo and you can see the deleted resource:*
 ![Resource Deleted](images/deleted-resource.png)
